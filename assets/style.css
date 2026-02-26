@@ -80,18 +80,31 @@ li{margin:8px 0}
 }
 
 /* --- Compact mode --- */
-.wrap{ margin:18px auto; }                 /* 原来 28px */
+.wrap{ margin:18px auto; }                
 .nav{ margin-bottom:12px; padding-bottom:8px; }
 
-.header{ gap:22px; }                       /* 原来更大 */
-.profile-photo{ width:150px; height:150px; }/* 如果你是170，改回150更紧凑 */
+.header{ gap:22px; }                    
+.profile-photo{ width:150px; height:150px; }
 
-h1{ font-size:22px; margin:0 0 2px; }      /* 名字更低调 */
+h1{ font-size:22px; margin:0 0 2px; }     
 .small{ font-size:14px; line-height:1.45; }
 
-p{ margin:8px 0; }                         /* 段落更紧 */
-ul{ margin:6px 0 0; }                      /* 列表更紧 */
+p{ margin:8px 0; }                      
+ul{ margin:6px 0 0; }                  
 li{ margin:6px 0; }
 
-h2{ font-size:16px; margin:16px 0 8px; }   /* 二级标题更compact */
+h2{ font-size:16px; margin:16px 0 8px; }  
+
+
+.research-box{
+  border:1px solid #ddd;
+  background:#fafafa;
+  padding:14px 18px;
+  margin:18px 0;
+  border-radius:6px;
+}
+
+.research-box h2{
+  margin-top:0;
+}
 
