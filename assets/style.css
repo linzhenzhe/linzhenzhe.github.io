@@ -1,45 +1,78 @@
 :root{
   --main-blue:#2a6db0;
   --main-blue-dark:#1f4e85;
+  --text:#111;
+  --muted:#666;
+  --rule:#ddd;
 }
 
-body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;margin:0}
-.wrap{max-width:900px;margin:28px auto;padding:0 16px}
-.nav{border-bottom:1px solid #ddd;padding-bottom:10px;margin-bottom:18px}
-.nav a{
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.6;
+  margin:0;
+  color:var(--text);
+}
+
+.wrap{
+  max-width:900px;
+  margin:18px auto;
+  padding:0 16px;
+}
+
+/* Global links */
+a{
   color:var(--main-blue);
-  font-weight:500;
-  margin-right:14px;      
-  letter-spacing:0.1px;  
+  text-decoration:none;
 }
-.nav{ line-height:1.8; }
-h1{
-  margin:0 0 4px;
-  font-size:24px;    
-  font-weight:600;   
+a:visited{ color:var(--main-blue); }
+a:hover{
+  color:var(--main-blue-dark);
+  text-decoration:underline;
 }
-h2{margin:12px 0 10px;font-size:18px}
-.small{
-  color:#666;
-  font-size:15px;
-}
-ul{padding-left:20px}
-li{margin:8px 0}
 
-/* --- Header layout (photo + text + identity block) --- */
+/* Nav */
+.nav{
+  border-bottom:1px solid var(--rule);
+  padding-bottom:8px;
+  margin-bottom:12px;
+  line-height:1.8;
+}
+.nav a{
+  font-weight:500;
+  margin-right:14px;
+  letter-spacing:0.1px;
+}
+
+/* Typography */
+h1{
+  margin:0 0 2px;
+  font-size:22px;
+  font-weight:600;
+}
+h2{
+  margin:12px 0 6px;
+  font-size:16px;
+}
+.small{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.45;
+}
+p{ margin:8px 0; }
+
+ul{
+  padding-left:20px;
+  margin:6px 0 0;
+}
+li{ margin:6px 0; }
+
+/* Header layout */
 .header{
   display:flex;
   align-items:flex-start;
   justify-content:space-between;
-  gap:32px;
+  gap:22px;
   flex-wrap:wrap;
-}
-
-.profile-photo{
-  width:170px;
-  height:170px;
-  object-fit:cover;
-  border-radius:6px;
 }
 
 .header-text{
@@ -47,40 +80,26 @@ li{margin:8px 0}
   min-width:320px;
 }
 
+.profile-photo{
+  width:150px;
+  height:150px;
+  object-fit:cover;
+  border-radius:6px;
+}
+
 .identity{
   width:220px;
-  border-left:1px solid #ddd;
+  border-left:1px solid var(--rule);
   padding-left:18px;
 }
-
 .identity h1{
-  font-size:24px;
-  margin-top:0;
-}
-
-.identity .label{
-  font-weight:600;
-  color:#333;
-  margin-bottom:4px;
-}
-
-.identity .row{
-  margin:10px 0;
-}
-
-.identity a{
-  color:#0b57d0;
-  text-decoration:none;
-}
-
-.identity a:hover{
-  text-decoration:underline;
+  font-size:22px;
+  margin:0 0 2px;
 }
 
 @media (max-width: 720px){
   .identity{
     width:100%;
-    flex:1 1 100%;
     border-left:none;
     padding-left:0;
     border-top:1px solid #eee;
@@ -89,69 +108,37 @@ li{margin:8px 0}
   }
 }
 
-/* --- Compact mode --- */
-.wrap{ margin:18px auto; }                
-.nav{ margin-bottom:12px; padding-bottom:8px; }
-
-.header{ gap:22px; }                    
-.profile-photo{ width:150px; height:150px; }
-
-h1{ font-size:22px; margin:0 0 2px; }     
-.small{ font-size:14px; line-height:1.45; }
-
-p{ margin:8px 0; }                      
-ul{ margin:6px 0 0; }                  
-li{ margin:6px 0; }
-
-h2{ font-size:16px; margin:16px 0 8px; }  
-
+/* Research box */
 .research-box{
-  border:2px solid var(--main-blue);   /* ⭐ 全部统一蓝色 */
+  border:2px solid var(--main-blue);
   background:#f7fbff;
   padding:14px 18px;
   margin:10px 0;
   border-radius:6px;
 }
-
 .research-box h2{
+  margin-top:0;
   font-size:16px;
   font-weight:600;
   letter-spacing:0.2px;
 }
 
-a{
-  color:var(--main-blue);
-  text-decoration:none;
-}
-
-a:visited{
-  color:var(--main-blue);
-}
-
-a:hover{
-  color:var(--main-blue-dark);
-  text-decoration:underline;
-}
-
-/* ===== Research Interests list ===== */
-
+/* Research Interests bullets (clean + blue) */
 .research-box ul{
-  list-style:none;     /* ❌ 去掉黑点 */
+  list-style:none;
   padding-left:0;
+  margin:6px 0 0;
 }
-
 .research-box li{
   margin:8px 0;
   padding-left:18px;
   position:relative;
 }
-
-/* ⭐ Academic blue bullet */
 .research-box li::before{
   content:"•";
   position:absolute;
   left:0;
+  top:-1px;
   color:var(--main-blue);
   font-size:18px;
-  top:-1px;
 }
