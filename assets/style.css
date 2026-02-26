@@ -8,3 +8,17 @@ h2{margin:22px 0 10px;font-size:18px}
 .small{color:#555;font-size:14px}
 ul{padding-left:20px}
 li{margin:8px 0}
+.header{
+  display:flex;
+  align-items:flex-start;
+  gap:24px;
+}
+
+.profile-photo{
+  width:150px;
+  border-radius:6px;
+}
+
+.header-text{
+  flex:1;
+}
