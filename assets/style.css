@@ -105,11 +105,9 @@ li{ margin:6px 0; }
 
 h2{ font-size:16px; margin:16px 0 8px; }  
 
-
 .research-box{
-  border:1px solid #d6e3f3;
-  border-left:2px solid var(--main-blue);
-  background:#f7fbff;     /* ⭐ 极浅蓝 */
+  border:2px solid var(--main-blue);   /* ⭐ 全部统一蓝色 */
+  background:#f7fbff;
   padding:14px 18px;
   margin:18px 0;
   border-radius:6px;
