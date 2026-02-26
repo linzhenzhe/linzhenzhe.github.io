@@ -108,3 +108,25 @@ h2{ font-size:16px; margin:16px 0 8px; }
   margin-top:0;
 }
 
+
+/* =========================
+   Global Link Style
+========================= */
+
+a{
+  color:#2a6db0;          /* ⭐ Academic blue */
+  text-decoration:none;
+}
+
+a:visited{
+  color:#2a6db0;         
+}
+
+a:hover{
+  color:#1f4e85;          
+  text-decoration:underline;
+}
+
+a:active{
+  color:#1f4e85;
+}
