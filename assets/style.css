@@ -116,9 +116,10 @@ h2{ font-size:16px; margin:16px 0 8px; }
 }
 
 .research-box h2{
-  margin-top:0;
+  font-size:16px;
+  font-weight:600;
+  letter-spacing:0.2px;
 }
-
 
 a{
   color:var(--main-blue);
