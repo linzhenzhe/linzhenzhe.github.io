@@ -9,7 +9,10 @@ body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;margin:0}
 .nav a{
   color:var(--main-blue);
   font-weight:500;
+  margin-right:14px;      
+  letter-spacing:0.1px;  
 }
+.nav{ line-height:1.8; }
 h1{
   margin:0 0 4px;
   font-size:24px;    
@@ -104,7 +107,12 @@ h2{ font-size:16px; margin:16px 0 8px; }
 
 
 .research-box{
-  border-left:4px solid var(--main-blue);
+  border:1px solid #c5c5c5;                
+  border-left:4px solid var(--main-blue);  
+  background:#f3f3f3;
+  padding:14px 18px;
+  margin:18px 0;
+  border-radius:6px;
 }
 
 .research-box h2{
