@@ -107,9 +107,9 @@ h2{ font-size:16px; margin:16px 0 8px; }
 
 
 .research-box{
-  border:1px solid #c5c5c5;                
-  border-left:4px solid var(--main-blue);  
-  background:#f3f3f3;
+  border:1px solid #d6e3f3;
+  border-left:4px solid var(--main-blue);
+  background:#f7fbff;     /* ⭐ 极浅蓝 */
   padding:14px 18px;
   margin:18px 0;
   border-radius:6px;
@@ -132,4 +132,27 @@ a:visited{
 a:hover{
   color:var(--main-blue-dark);
   text-decoration:underline;
+}
+
+/* ===== Research Interests list ===== */
+
+.research-box ul{
+  list-style:none;     /* ❌ 去掉黑点 */
+  padding-left:0;
+}
+
+.research-box li{
+  margin:8px 0;
+  padding-left:18px;
+  position:relative;
+}
+
+/* ⭐ Academic blue bullet */
+.research-box li::before{
+  content:"•";
+  position:absolute;
+  left:0;
+  color:var(--main-blue);
+  font-size:18px;
+  top:-1px;
 }
