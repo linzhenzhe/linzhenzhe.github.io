@@ -108,7 +108,7 @@ h2{ font-size:16px; margin:16px 0 8px; }
 
 .research-box{
   border:1px solid #d6e3f3;
-  border-left:4px solid var(--main-blue);
+  border-left:2px solid var(--main-blue);
   background:#f7fbff;     /* ⭐ 极浅蓝 */
   padding:14px 18px;
   margin:18px 0;
