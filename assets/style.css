@@ -35,3 +35,46 @@ li{margin:8px 0}
   flex:1;
   min-width:260px;
 }
+
+/* Right-side academic identity block */
+.identity{
+  width: 230px;
+  border-left: 1px solid #ddd;
+  padding-left: 16px;
+  font-size: 14px;
+  color: #555;
+}
+
+.identity .label{
+  font-weight: 600;
+  color: #333;
+  margin-top: 2px;
+}
+
+.identity .row{
+  margin: 8px 0;
+}
+
+.identity a{
+  color:#0b57d0;
+  text-decoration:none;
+}
+.identity a:hover{ text-decoration:underline; }
+
+/* Make header layout handle 3 columns nicely */
+.header-text{
+  flex: 1;
+  min-width: 320px;
+}
+
+/* Mobile: identity block goes below without a left border */
+@media (max-width: 720px){
+  .identity{
+    width: 100%;
+    border-left: none;
+    padding-left: 0;
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+  }
+}
