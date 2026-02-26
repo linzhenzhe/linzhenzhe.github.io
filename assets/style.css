@@ -15,9 +15,11 @@ h2{margin:22px 0 10px;font-size:18px}
 }
 ul{padding-left:20px}
 li{margin:8px 0}
+
+/* --- Header layout (photo + text + identity block) --- */
 .header{
   display:flex;
-  align-items:center;
+  align-items:flex-start;
   gap:24px;
   flex-wrap:wrap;
   margin-top:12px;
@@ -28,48 +30,51 @@ li{margin:8px 0}
   height:150px;
   object-fit:cover;
   border-radius:6px;
-  margin-top:4px;
+  flex:0 0 auto;
 }
 
-/* Right-side academic identity block */
+.header-text{
+  flex:1 1 420px;
+  min-width:320px;
+}
+
 .identity{
-  width: 230px;
-  border-left: 1px solid #ddd;
-  padding-left: 16px;
-  font-size: 14px;
-  color: #555;
+  flex:0 0 230px;
+  width:230px;
+  border-left:1px solid #ddd;
+  padding-left:16px;
+  font-size:14px;
+  color:#555;
 }
 
 .identity .label{
-  font-weight: 600;
-  color: #333;
-  margin-top: 2px;
+  font-weight:600;
+  color:#333;
+  margin-bottom:4px;
 }
 
 .identity .row{
-  margin: 8px 0;
+  margin:10px 0;
 }
 
 .identity a{
   color:#0b57d0;
   text-decoration:none;
 }
-.identity a:hover{ text-decoration:underline; }
 
-/* Make header layout handle 3 columns nicely */
-.header-text{
-  flex: 1;
-  min-width: 320px;
+.identity a:hover{
+  text-decoration:underline;
 }
 
-/* Mobile: identity block goes below without a left border */
 @media (max-width: 720px){
   .identity{
-    width: 100%;
-    border-left: none;
-    padding-left: 0;
-    margin-top: 10px;
-    border-top: 1px solid #eee;
-    padding-top: 10px;
+    width:100%;
+    flex:1 1 100%;
+    border-left:none;
+    padding-left:0;
+    border-top:1px solid #eee;
+    padding-top:10px;
+    margin-top:10px;
   }
 }
+
