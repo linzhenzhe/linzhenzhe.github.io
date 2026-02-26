@@ -31,11 +31,6 @@ li{margin:8px 0}
   margin-top:4px;
 }
 
-.header-text{
-  flex:1;
-  min-width:260px;
-}
-
 /* Right-side academic identity block */
 .identity{
   width: 230px;
