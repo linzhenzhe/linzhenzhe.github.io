@@ -110,7 +110,7 @@ li{ margin:6px 0; }
 
 /* Research box */
 .research-box{
-  border:2px solid var(--main-blue);
+  border:1.5px solid var(--main-blue);
   background:#f7fbff;
   padding:14px 18px;
   margin:10px 0;
