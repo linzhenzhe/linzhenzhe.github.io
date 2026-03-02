@@ -148,7 +148,7 @@ li{ margin:6px 0; }
 .research-box h2::after{
   content:"";
   display:block;
-  width:44px;
+  width:6ch;
   height:3px;
   background:var(--main-blue);
   margin-top:7px;
