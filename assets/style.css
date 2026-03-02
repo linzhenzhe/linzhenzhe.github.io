@@ -142,3 +142,8 @@ li{ margin:6px 0; }
   color:var(--main-blue);
   font-size:18px;
 }
+.availability{
+  margin-top:6px;
+  font-size:15px;
+  color:#333;
+}
