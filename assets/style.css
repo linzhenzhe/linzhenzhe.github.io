@@ -4,6 +4,13 @@
   --text:#111;
   --muted:#666;
   --rule:#ddd;
+
+  /* Added polish tokens */
+  --bg:#ffffff;
+  --surface:#f7fbff;
+  --border:#cfd8e3;
+  --shadow:0 10px 22px rgba(0,0,0,0.06);
+  --radius:10px;
 }
 
 body{
@@ -11,6 +18,7 @@ body{
   line-height:1.6;
   margin:0;
   color:var(--text);
+  background:var(--bg);
 }
 
 .wrap{
@@ -49,10 +57,14 @@ h1{
   font-size:22px;
   font-weight:600;
 }
+
+/* Keep global h2 modest for non-box sections */
 h2{
   margin:12px 0 6px;
   font-size:16px;
+  font-weight:600;
 }
+
 .small{
   color:var(--muted);
   font-size:14px;
@@ -108,44 +120,86 @@ li{ margin:6px 0; }
   }
 }
 
-/* Research box */
+/* =========================
+   Research box (polished)
+   ========================= */
 .research-box{
-  border:1.5px solid var(--main-blue);
-  background:#f7fbff;
-  padding:14px 18px;
-  margin:10px 0;
-  border-radius:6px;
-}
-.research-box h2{
-  margin-top:0;
-  font-size:16px;
-  font-weight:600;
-  letter-spacing:0.2px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-left:5px solid var(--main-blue);
+  border-radius:var(--radius);
+  padding:16px 18px;
+  margin:18px 0;
+  box-shadow:var(--shadow);
 }
 
-/* Research Interests bullets (clean + blue) */
+/* Title clearly separated from bullets */
+.research-box h2{
+  margin:0 0 12px;
+  font-size:18px;          /* bigger than bullets */
+  font-weight:700;
+  letter-spacing:0.2px;
+  color:var(--text);
+  line-height:1.25;
+  position:relative;
+}
+
+/* Small blue underline accent (helps hierarchy a lot) */
+.research-box h2::after{
+  content:"";
+  display:block;
+  width:44px;
+  height:3px;
+  background:var(--main-blue);
+  margin-top:7px;
+  border-radius:2px;
+}
+
+/* Bullets: cleaner + more “body text” feel */
 .research-box ul{
   list-style:none;
   padding-left:0;
-  margin:6px 0 0;
+  margin:10px 0 0;
 }
+
 .research-box li{
-  margin:8px 0;
+  margin:10px 0;
   padding-left:18px;
   position:relative;
+  color:#1f2937;          /* slightly softer than pure black */
+  font-size:15px;
+  line-height:1.55;
 }
+
+/* Bullet dot */
 .research-box li::before{
   content:"•";
   position:absolute;
   left:0;
-  top:-1px;
+  top:0;
   color:var(--main-blue);
   font-size:18px;
+  line-height:1.2;
 }
+
+/* If you use <b> or <strong> in bullets, make it not “too loud” */
+.research-box li strong,
+.research-box li b{
+  font-weight:600;
+  color:#0f172a;
+}
+
+/* =========================
+   Availability callout (match cards)
+   ========================= */
 .availability{
-  margin-top:10px;
-  padding:8px 12px;
+  margin-top:12px;
+  padding:12px 14px;
   background:#eef5ff;
-  border-left:3px solid var(--main-blue);
+  border:1px solid rgba(42,109,176,0.25);
+  border-left:5px solid var(--main-blue);
+  border-radius:var(--radius);
   font-size:15px;
+  line-height:1.55;
+  box-shadow:0 8px 18px rgba(0,0,0,0.05);
 }
