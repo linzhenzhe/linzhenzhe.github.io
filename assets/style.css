@@ -147,7 +147,7 @@ li{ margin:6px 0; }
   position:absolute;
   left:0;
   bottom:0;
-  width:10%;        
+  width:5%;        
   height:1.5px solid rgba(42,109,176,0.85);
   background:var(--main-blue);
 }
