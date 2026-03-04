@@ -130,11 +130,48 @@ Rutgers University, Spring 2020
 
 </div>
 
-<p class="small" style="border-top:1px solid #ddd;padding-top:10px;margin-top:24px;">
-Last updated: 2026 ·
-Visitors: <span id="busuanzi_value_site_uv"></span> ·
-Page Views: <span id="busuanzi_value_site_pv"></span>
+<p class="small footer">
+Last updated: <span id="last-updated"></span> ·
+<span id="counter-wrap" class="counter-wrap">
+  Visitors: <span id="busuanzi_value_site_uv" class="counter-num">—</span> ·
+  Page Views: <span id="busuanzi_value_site_pv" class="counter-num">—</span>
+</span>
 </p>
+
+<script>
+  // Auto "Last updated" using the page's last modified time (Month YYYY)
+  (function () {
+    const el = document.getElementById("last-updated");
+    if (!el) return;
+    const d = new Date(document.lastModified);
+    const s = d.toLocaleString(undefined, { month: "short", year: "numeric" });
+    el.textContent = s;
+  })();
+
+  // Prevent counter "jump": hide until busuanzi fills numbers, then show.
+  (function () {
+    const wrap = document.getElementById("counter-wrap");
+    if (!wrap) return;
+    wrap.style.visibility = "hidden";
+
+    const uv = document.getElementById("busuanzi_value_site_uv");
+    const pv = document.getElementById("busuanzi_value_site_pv");
+
+    const ready = () => {
+      const uvOk = uv && uv.textContent && uv.textContent.trim() !== "" && uv.textContent.trim() !== "—";
+      const pvOk = pv && pv.textContent && pv.textContent.trim() !== "" && pv.textContent.trim() !== "—";
+      if (uvOk || pvOk) wrap.style.visibility = "visible";
+    };
+
+    // Check a few times because busuanzi is async
+    let tries = 0;
+    const t = setInterval(() => {
+      ready();
+      tries++;
+      if (wrap.style.visibility === "visible" || tries > 40) clearInterval(t);
+    }, 200);
+  })();
+</script>
 
 </div>
   
