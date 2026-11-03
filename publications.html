@@ -5,56 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Publications | Zhenzhe Lin</title>
   <link rel="stylesheet" href="assets/style.css">
+<script>
+(function(){
+  const key='zhenzhe-site-theme';
+  let saved=null;
+  try{saved=localStorage.getItem(key)}catch(e){}
+  const dark=saved==='dark'||(!saved&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches);
+  document.documentElement.dataset.theme=dark?'dark':'light';
+  window.toggleSiteTheme=function(){
+    const next=document.documentElement.dataset.theme==='dark'?'light':'dark';
+    document.documentElement.dataset.theme=next;
+    try{localStorage.setItem(key,next)}catch(e){}
+    document.querySelectorAll('.theme-toggle').forEach(b=>{
+      b.textContent=next==='dark'?'☀ Light':'☾ Dark';
+      b.setAttribute('aria-label',next==='dark'?'Switch to light mode':'Switch to dark mode');
+    });
+  };
+  document.addEventListener('DOMContentLoaded',()=>{
+    document.querySelectorAll('.theme-toggle').forEach(b=>{
+      b.textContent=document.documentElement.dataset.theme==='dark'?'☀ Light':'☾ Dark';
+      b.setAttribute('aria-label',document.documentElement.dataset.theme==='dark'?'Switch to light mode':'Switch to dark mode');
+    });
+  });
+})();
+</script>
 </head>
 
 <body>
 <div class="wrap">
 
-<nav class="nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="research.html">Research</a><a href="publications.html" class="active" aria-current="page">Publications</a><a href="teaching.html">Teaching</a><a href="files/CV_zhenzhe_lin.pdf">CV</a></nav>
+<nav class="nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="research.html">Research</a><a href="publications.html" class="active" aria-current="page">Publications</a><a href="teaching.html">Teaching</a><a href="files/CV_zhenzhe_lin.pdf">CV</a><button type="button" class="theme-toggle" onclick="toggleSiteTheme()" aria-label="Toggle dark mode">☾ Dark</button></nav>
 
-<h1>Publications</h1>
-
-<h2>Conference Papers</h2>
-
-<ul>
-
-<li>
-<b>Wideband Low-complexity High-speed 5G NR Backscatter</b><br>
-Zhenzhe Lin, Yoon Chae, Panneer Selvam Santhalingam, Mingyo Jeong, Parth Pathak.<br>
-<i>ACM MobiSys 2026</i>.
-</li>
-
-<li>
-<b>B3: Bistatic Backscatter Beamforming for mmWave IoTs</b><br>
-Zhenzhe Lin, Yoon Chae, Mingyo Jeong, Parth Pathak.<br>
-<i>ACM SenSys 2026</i>.
-</li>
-
-<li>
-<b>mmComb: High-speed mmWave Commodity WiFi Backscatter</b><br>
-Yoon Chae, Zhenzhe Lin, Kang Min Bae, Song Min Kim, Parth Pathak.<br>
-<i>USENIX NSDI 2024</i>.
-</li>
-
-<li>
-<b>mmWave WiFi Backscatter Communication</b><br>
-Yoon Chae, Zhenzhe Lin, Parth Pathak.<br>
-<i>Commonwealth Cyber Initiative Symposium 2024</i>.
-</li>
-
-<li>
-<b>WiEat: Fine-grained Device-free Eating Monitoring Leveraging Wi-Fi Signals</b><br>
-Zhenzhe Lin, Yucheng Xie, Xiaonan Guo, Yanzhi Ren, Yingying Chen, Chen Wang.<br>
-<i>ICCCN 2020</i>.
-</li>
-
-<li>
-<b>WiFi-enabled Automatic Eating Moment Monitoring Using Smartphones</b><br>
-Zhenzhe Lin, Yucheng Xie, Xiaonan Guo, Chen Wang, Yanzhi Ren, Yingying Chen.<br>
-<i>HealthyIoT 2019</i> — <b>Best Paper Award</b>.
-</li>
-
-</ul>
+<main class="publication-page"><h1>Publications</h1><h2>Conference Papers</h2><div class="pub-list"><article class="pub-row"><div class="pub-venue">MobiSys &#x27;26</div><div class="pub-actions"><a class="pdf-button" href="files/WiNB_MobiSys2026.pdf" target="_blank" rel="noopener" aria-label="Read PDF: WiNB: Wideband Low-complexity High-speed 5G NR Backscatter">PDF</a></div><div class="pub-details"><a class="pub-title" href="research.html#winb">WiNB: Wideband Low-complexity High-speed 5G NR Backscatter</a><div class="pub-authors">Zhenzhe Lin, Yoon Chae, Panneer Selvam Santhalingam, Mingyo Jeong, Parth Pathak</div><div class="pub-conference">ACM International Conference on Mobile Systems, Applications, and Services (MobiSys), 2026</div></div></article><article class="pub-row"><div class="pub-venue">SenSys &#x27;26</div><div class="pub-actions"><a class="pdf-button" href="files/B3_SenSys2026.pdf" target="_blank" rel="noopener" aria-label="Read PDF: B³: Bistatic Backscatter Beamforming for mmWave IoTs">PDF</a></div><div class="pub-details"><a class="pub-title" href="research.html#b3">B³: Bistatic Backscatter Beamforming for mmWave IoTs</a><div class="pub-authors">Zhenzhe Lin, Yoon Chae, Mingyo Jeong, Parth Pathak</div><div class="pub-conference">ACM/IEEE International Conference on Embedded Artificial Intelligence and Sensing Systems (SenSys), 2026</div></div></article><article class="pub-row"><div class="pub-venue">NSDI &#x27;24</div><div class="pub-actions"><a class="pdf-button" href="files/mmComb_NSDI2024.pdf" target="_blank" rel="noopener" aria-label="Read PDF: mmComb: High-speed mmWave Commodity WiFi Backscatter">PDF</a></div><div class="pub-details"><a class="pub-title" href="research.html#mmcomb">mmComb: High-speed mmWave Commodity WiFi Backscatter</a><div class="pub-authors">Yoon Chae, Zhenzhe Lin, Kang Min Bae, Song Min Kim, Parth Pathak</div><div class="pub-conference">USENIX Symposium on Networked Systems Design and Implementation (NSDI), 2024</div></div></article><article class="pub-row"><div class="pub-venue">ICCCN &#x27;20</div><div class="pub-actions"><a class="pdf-button" href="files/WiEat_ICCCN2020.pdf" target="_blank" rel="noopener" aria-label="Read PDF">PDF</a></div><div class="pub-details"><span class="pub-title">WiEat: Fine-grained Device-free Eating Monitoring Leveraging Wi-Fi Signals</span><div class="pub-authors">Zhenzhe Lin, Yucheng Xie, Xiaonan Guo, Yanzhi Ren, Yingying Chen, Chen Wang</div><div class="pub-conference">International Conference on Computer Communications and Networks (ICCCN), 2020</div></div></article><article class="pub-row"><div class="pub-venue">HealthyIoT &#x27;19</div><div class="pub-actions"><a class="pdf-button" href="files/WiFi_Eating_Moment_HealthyIoT.pdf" target="_blank" rel="noopener" aria-label="Read PDF">PDF</a></div><div class="pub-details"><span class="pub-title">WiFi-enabled Automatic Eating Moment Monitoring Using Smartphones</span><div class="pub-authors">Zhenzhe Lin, Yucheng Xie, Xiaonan Guo, Chen Wang, Yanzhi Ren, Yingying Chen</div><div class="pub-conference">HealthyIoT, 2019 · Best Paper Award</div></div></article></div><h2 class="poster-heading">Posters</h2><div class="pub-list"><article class="pub-row"><div class="pub-venue">CCI &#x27;24</div><div class="pub-actions"></div><div class="pub-details"><span class="pub-title">mmWave WiFi Backscatter Communication</span><div class="pub-authors">Yoon Chae, Zhenzhe Lin, Parth Pathak</div><div class="pub-conference">Commonwealth Cyber Initiative Symposium, 2024</div></div></article></div></main>
 
 </div>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "33f86b8440bf45f4a64846b22cbbdaa3"}'></script><!-- End Cloudflare Web Analytics -->

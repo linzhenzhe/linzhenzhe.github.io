@@ -1,4 +1,82 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Zhenzhe Lin: AI-driven wireless and mobile systems, edge intelligence, and battery-free networking."><title>Home | Zhenzhe Lin</title><link rel="stylesheet" href="assets/style.css"></head><body><div class="wrap"><nav class="nav" aria-label="Main navigation"><a href="index.html" class="active" aria-current="page">Home</a><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="teaching.html">Teaching</a><a href="files/CV_zhenzhe_lin.pdf">CV</a></nav><header class="header"><div class="header-text"><p class="eyebrow">COMPUTER SCIENCE · WIRELESS SYSTEMS · EDGE AI</p><h1>Zhenzhe Lin</h1><p class="small">Ph.D. Candidate in Computer Science · George Mason University</p><h2 class="hero-title">Building Intelligent Wireless &amp; Mobile Systems</h2><p>My research lies at the intersection of <strong>wireless networking, mobile computing, and artificial intelligence</strong>. I design practical systems that combine learning-based signal processing, efficient AI inference, and battery-free communication to make next-generation networks more intelligent and accessible.</p><p>My work spans end-to-end wireless prototyping, neural receiver design, mmWave networking, and resource-efficient sensing. I am particularly interested in translating advances in AI into reliable, real-time networked systems.</p><p class="small links"><a href="mailto:zlin9@gmu.edu">Email</a> · <a href="https://scholar.google.com/citations?user=ePMK0u0AAAAJ&hl=en&oi=sra">Google Scholar</a> · <a href="https://www.linkedin.com/in/zhenzhe-lin-382334135/">LinkedIn</a> · <a href="files/CV_zhenzhe_lin.pdf">Academic CV</a></p><p class="availability">Seeking faculty opportunities in Computer Science, particularly Systems, Networking, Mobile Computing, and AI-driven systems.<br><strong>Authorized to Work in the U.S. · No Employer Sponsorship Required</strong></p></div><img src="assets/photo.jpg" class="profile-photo" alt="Portrait of Zhenzhe Lin"></header>
-<section class="research-box"><h2>Research Vision</h2><p>I aim to build <strong>AI-driven wireless and mobile systems</strong> that jointly optimize communication, computation, and sensing. My current research connects three themes:</p><div class="direction-grid"><div><h3>AI for Wireless Systems</h3><p>Learning-based decoding, channel estimation, and adaptive wireless communication.</p></div><div><h3>Efficient Edge Intelligence</h3><p>Compact neural architectures, model pruning, and latency-aware inference for real-time systems.</p></div><div><h3>Battery-Free Networking</h3><p>Low-power backscatter communication and scalable sensing over commodity wireless networks.</p></div></div><p><a class="text-link" href="research.html">Explore my research projects →</a></p></section>
-<section class="research-box"><h2>Featured Research</h2><div class="feature"><div><p class="eyebrow">MOBISYS 2026 · FIRST AUTHOR</p><h3>WiNB: Learning-Driven 5G NR Backscatter</h3><p>A multi-task transformer jointly learns channel estimation and backscatter decoding; model pruning brings inference closer to real-time wireless requirements.</p><p class="metrics">71 Mbps · 16 μs/symbol · ~1,000× faster demodulation</p><a href="research.html#winb">Research details</a> · <a href="files/WiNB_MobiSys2026.pdf">Paper PDF</a></div></div><div class="feature"><div><p class="eyebrow">SENSYS 2026 · CO-PRIMARY AUTHOR</p><h3>B³: Bistatic Backscatter Beamforming</h3><p>Protocol-compatible multibeam tags reveal channel and identity information to support concurrent multi-tag beamforming.</p><p class="metrics">Up to 13 dB SNR gain · 11 m range · 2.5 mW</p><a href="research.html#b3">Research details</a> · <a href="files/B3_SenSys2026.pdf">Paper PDF</a></div></div><div class="feature"><div><p class="eyebrow">NSDI 2024 · SECOND AUTHOR</p><h3>mmComb: Commodity mmWave Wi-Fi Backscatter</h3><p>High-speed, ultra-low-power communication using standard 802.11ad/ay beamforming frames and spatial self-interference suppression.</p><p class="metrics">55 Mbps · 87.3 μW · &gt;19 dB SINR improvement</p><a href="research.html#mmcomb">Research details</a> · <a href="files/mmComb_NSDI2024.pdf">Paper PDF</a></div></div><p><a class="text-link" href="publications.html">View all publications →</a></p></section><footer class="small footer"><span>© 2026 Zhenzhe Lin · <a href="mailto:zlin9@gmu.edu">Contact</a></span><span><a href="https://scholar.google.com/citations?user=ePMK0u0AAAAJ&hl=en&oi=sra">Google Scholar</a></span></footer></div></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Zhenzhe Lin — Ph.D. candidate at George Mason University researching AI-driven wireless and mobile systems.">
+<title>Zhenzhe Lin | Home</title>
+<link rel="stylesheet" href="assets/style.css">
+<script>
+(function(){
+  const key='zhenzhe-site-theme';
+  let saved=null;
+  try{saved=localStorage.getItem(key)}catch(e){}
+  const dark=saved==='dark'||(!saved&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches);
+  document.documentElement.dataset.theme=dark?'dark':'light';
+  window.toggleSiteTheme=function(){
+    const next=document.documentElement.dataset.theme==='dark'?'light':'dark';
+    document.documentElement.dataset.theme=next;
+    try{localStorage.setItem(key,next)}catch(e){}
+    document.querySelectorAll('.theme-toggle').forEach(b=>{
+      b.textContent=next==='dark'?'☀ Light':'☾ Dark';
+      b.setAttribute('aria-label',next==='dark'?'Switch to light mode':'Switch to dark mode');
+    });
+  };
+  document.addEventListener('DOMContentLoaded',()=>{
+    document.querySelectorAll('.theme-toggle').forEach(b=>{
+      b.textContent=document.documentElement.dataset.theme==='dark'?'☀ Light':'☾ Dark';
+      b.setAttribute('aria-label',document.documentElement.dataset.theme==='dark'?'Switch to light mode':'Switch to dark mode');
+    });
+  });
+})();
+</script>
+</head>
+<body><div class="wrap">
+<nav class="nav" aria-label="Main navigation"><a href="index.html" class="active" aria-current="page">Home</a><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="teaching.html">Teaching</a><a href="files/CV_zhenzhe_lin.pdf">CV</a><button type="button" class="theme-toggle" onclick="toggleSiteTheme()" aria-label="Toggle dark mode">☾ Dark</button></nav>
+<header class="header home-intro profile-panel">
+  <img src="assets/photo-profile.jpg" class="profile-photo" width="220" height="220" alt="Zhenzhe Lin" decoding="async">
+  <div class="header-text">
+    <h1>Zhenzhe Lin</h1>
+    <p class="intro-bio">I am a Ph.D. candidate in Computer Science at <a href="https://www.gmu.edu/">George Mason University</a>, advised by <a href="https://www.phpathak.com/">Prof. Parth Pathak</a>. My research focuses on <strong>AI-driven wireless and mobile systems</strong>, with interests in learning-based wireless receivers, mmWave networking, battery-free communication, and resource-efficient edge AI. I design and evaluate practical wireless systems that bring together communication, sensing, and intelligent computing.</p>
+    <div class="intro-links">
+      <a href="mailto:zlin9@gmu.edu">zlin9@gmu.edu</a>
+      <a href="files/CV_zhenzhe_lin.pdf">CV</a>
+      <a href="https://scholar.google.com/citations?user=ePMK0u0AAAAJ&amp;hl=en&amp;oi=sra">Google Scholar</a>
+      <a href="https://www.linkedin.com/in/zhenzhe-lin-382334135/">LinkedIn</a>
+    </div>
+  </div>
+</header>
+<main>
+<section class="home-section research-panel"><h2>Research</h2>
+<p>My work focuses on <strong>AI-driven wireless and mobile systems</strong>, spanning learning-based wireless receivers, efficient AI inference, mmWave networking, and battery-free communication. I am interested in advancing intelligent and resource-efficient edge systems.</p>
+<p><a href="research.html">Explore my research &rarr;</a></p></section>
+<section class="home-section publications-panel" aria-labelledby="selected-pubs">
+  <div class="section-heading"><h2 id="selected-pubs">Selected Publications</h2><a class="all-pubs" href="publications.html">All publications &rarr;</a></div>
+  <div class="pub-list"><article class="pub-row">
+  <div class="pub-venue">MobiSys &#x27;26</div>
+  <div class="pub-actions"><a class="pdf-button" href="files/WiNB_MobiSys2026.pdf" target="_blank" rel="noopener" aria-label="Read PDF: WiNB: Wideband Low-complexity High-speed 5G NR Backscatter">PDF</a></div>
+  <div class="pub-details"><a class="pub-title" href="research.html#winb">WiNB: Wideband Low-complexity High-speed 5G NR Backscatter</a>
+    <div class="pub-authors">Zhenzhe Lin, Yoon Chae, Panneer Selvam Santhalingam, Mingyo Jeong, Parth Pathak</div>
+    <div class="pub-conference">ACM International Conference on Mobile Systems, Applications, and Services (MobiSys), 2026</div>
+  </div>
+</article>
+<article class="pub-row">
+  <div class="pub-venue">SenSys &#x27;26</div>
+  <div class="pub-actions"><a class="pdf-button" href="files/B3_SenSys2026.pdf" target="_blank" rel="noopener" aria-label="Read PDF: B³: Bistatic Backscatter Beamforming for mmWave IoTs">PDF</a></div>
+  <div class="pub-details"><a class="pub-title" href="research.html#b3">B³: Bistatic Backscatter Beamforming for mmWave IoTs</a>
+    <div class="pub-authors">Zhenzhe Lin, Yoon Chae, Mingyo Jeong, Parth Pathak</div>
+    <div class="pub-conference">ACM/IEEE International Conference on Embedded Artificial Intelligence and Sensing Systems (SenSys), 2026</div>
+  </div>
+</article>
+<article class="pub-row">
+  <div class="pub-venue">NSDI &#x27;24</div>
+  <div class="pub-actions"><a class="pdf-button" href="files/mmComb_NSDI2024.pdf" target="_blank" rel="noopener" aria-label="Read PDF: mmComb: High-speed mmWave Commodity WiFi Backscatter">PDF</a></div>
+  <div class="pub-details"><a class="pub-title" href="research.html#mmcomb">mmComb: High-speed mmWave Commodity WiFi Backscatter</a>
+    <div class="pub-authors">Yoon Chae, Zhenzhe Lin, Kang Min Bae, Song Min Kim, Parth Pathak</div>
+    <div class="pub-conference">USENIX Symposium on Networked Systems Design and Implementation (NSDI), 2024</div>
+  </div>
+</article></div>
+</section>
+</main>
+<footer class="small footer"><span>© 2026 Zhenzhe Lin · <a href="mailto:zlin9@gmu.edu">Contact</a></span><span><a href="https://scholar.google.com/citations?user=ePMK0u0AAAAJ&amp;hl=en&amp;oi=sra">Google Scholar</a></span></footer>
+</div></body></html>

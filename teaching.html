@@ -3,13 +3,37 @@
 <head>
 <title>Teaching | Zhenzhe Lin</title>
 <link rel="stylesheet" href="assets/style.css">
+<script>
+(function(){
+  const key='zhenzhe-site-theme';
+  let saved=null;
+  try{saved=localStorage.getItem(key)}catch(e){}
+  const dark=saved==='dark'||(!saved&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches);
+  document.documentElement.dataset.theme=dark?'dark':'light';
+  window.toggleSiteTheme=function(){
+    const next=document.documentElement.dataset.theme==='dark'?'light':'dark';
+    document.documentElement.dataset.theme=next;
+    try{localStorage.setItem(key,next)}catch(e){}
+    document.querySelectorAll('.theme-toggle').forEach(b=>{
+      b.textContent=next==='dark'?'☀ Light':'☾ Dark';
+      b.setAttribute('aria-label',next==='dark'?'Switch to light mode':'Switch to dark mode');
+    });
+  };
+  document.addEventListener('DOMContentLoaded',()=>{
+    document.querySelectorAll('.theme-toggle').forEach(b=>{
+      b.textContent=document.documentElement.dataset.theme==='dark'?'☀ Light':'☾ Dark';
+      b.setAttribute('aria-label',document.documentElement.dataset.theme==='dark'?'Switch to light mode':'Switch to dark mode');
+    });
+  });
+})();
+</script>
 </head>
 
 <body>
 
 <div class="wrap">
 
-<nav class="nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="teaching.html" class="active" aria-current="page">Teaching</a><a href="files/CV_zhenzhe_lin.pdf">CV</a></nav>
+<nav class="nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="teaching.html" class="active" aria-current="page">Teaching</a><a href="files/CV_zhenzhe_lin.pdf">CV</a><button type="button" class="theme-toggle" onclick="toggleSiteTheme()" aria-label="Toggle dark mode">☾ Dark</button></nav>
 
 <div class="research-box">
 
